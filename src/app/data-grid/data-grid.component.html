@@ -1,0 +1,40 @@
+<table class="table mb-0">
+  <thead>
+    <tr>
+      <th (click)="doOrder(column.prop)" scope="col" *ngFor="let column of columnDefs">
+        <span class="header-name">{{column.displayName | uppercase}}</span>
+        <span *ngIf="column.prop!=''" [ngClass]="getClass(column.prop)" class="pl-2 fa sort-icon"></span>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngTemplateOutlet="rowData.length>0 ? hasData : noData"></ng-container>
+    <ng-template #hasData>
+      <tr *ngFor="let row of rowData | dataSorting:orderBy:prop; let i = index;">
+        <td>
+          <a [routerLink]="['/books',row.id]">
+            <span class="row-data" [innerHTML]="row.id"></span>
+          </a>
+        </td>
+        <td>
+          <span class="row-data" [innerHTML]="row.name"></span>
+        </td>
+        <td>
+          <span class="row-data" [innerHTML]="row.location"></span>
+        </td>
+        <td>
+          <span class="row-data" [innerHTML]="row.isOpened"></span>
+        </td>
+      </tr>
+    </ng-template>
+    <ng-template #noData>
+      <tr>
+        <td [attr.colspan]="columnDefs.length" class="text-center align-middle">
+          <span class="no-data">
+            No Rows
+          </span>
+        </td>
+      </tr>
+    </ng-template>
+  </tbody>
+</table>

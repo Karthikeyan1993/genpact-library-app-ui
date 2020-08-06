@@ -1,0 +1,87 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  background: linear-gradient(#1e1e2f, #1e1e24);
+  color: #fafafa;
+}
+
+/* Util */
+.x {
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12) !important;
+}
+
+.table {
+  color: #fafafa;
+  border-color: #343a40;
+  user-select: none;
+}
+
+.table > thead > tr > th {
+  cursor: pointer;
+}
+
+
+.table > tbody > tr {
+    cursor: pointer;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.sort-icon{
+  color: #495057;
+}
+
+/* Scrollbar Customize */
+::-webkit-scrollbar {
+  height: 30px;
+  overflow: visible;
+}
+
+::-webkit-scrollbar-button {
+  height: 0;
+  width: 0;
+}
+
+::-webkit-scrollbar-corner {
+  background: 0 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #414550;
+  background-clip: padding-box;
+  border: 5px solid transparent;
+  min-height: 50%;
+  padding: 0;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+  color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-clip: padding-box;
+  border: 1px solid transparent;
+  width: 10px;
+}
